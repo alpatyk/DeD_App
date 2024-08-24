@@ -1,16 +1,7 @@
-package org.example.Raca
+package Raca
 
-import Personagem
-
-class Elfo(
-    nome: String,
-    nivel: Int
-) : Personagem(nome, nivel) {
-
-    init {
-        // Aplicar bônus raciais
-
-        this.dex += 2
-
+class Elfo : Raca{
+    override fun aplicarBonusAtributos(atributos: MutableMap<String, Int>) {
+        atributos["dex"] = (atributos["dex"] ?: 0) + 2 // Elfos recebem +2 em Destreza
     }
 }

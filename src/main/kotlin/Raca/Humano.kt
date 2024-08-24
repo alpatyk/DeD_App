@@ -1,21 +1,12 @@
-package org.example.Raca
+package Raca
 
-import Personagem
-
-class Humano(
-    nome: String,
-    nivel: Int
-) : Personagem(nome, nivel) {
-
-    init {
-        // Aplicar bônus raciais
-        this.str += 1
-        this.con += 1
-        this.dex += 1
-        this.int += 1
-        this.sab += 1
-        this.car += 1
+class Humano : Raca{
+    override fun aplicarBonusAtributos(atributos: MutableMap<String, Int>) {
+        atributos["str"] = (atributos["str"] ?: 0) + 1
+        atributos["dex"] = (atributos["dex"] ?: 0) + 1
+        atributos["con"] = (atributos["con"] ?: 0) + 1
+        atributos["int"] = (atributos["int"] ?: 0) + 1
+        atributos["sab"] = (atributos["sab"] ?: 0) + 1
+        atributos["car"] = (atributos["car"] ?: 0) + 1
     }
 }
-
-

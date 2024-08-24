@@ -1,16 +1,7 @@
-package org.example.Raca
+package Raca
 
-import Personagem
-
-class Anao(
-    nome: String,
-    nivel: Int
-) : Personagem(nome, nivel) {
-
-    init {
-        // Aplicar bônus raciais
-
-        this.con += 2
-
+class Anao : Raca{
+    override fun aplicarBonusAtributos(atributos: MutableMap<String, Int>) {
+        atributos["con"] = (atributos["con"] ?: 0) + 2 // Elfos recebem +2 em Destreza
     }
 }
