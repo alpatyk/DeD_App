@@ -13,10 +13,10 @@ class Personagem(
     var pv: Int = 0
 
     init {
-        // Aplica os bônus da raça nos atributos
+
         racaStrategy.aplicarBonusAtributos(atributos)
 
-        // Calcula os pontos de vida com base na classe e constituição modificada
+
         val modificadorConstituicao = ((atributos["con"] ?: 10) - 10) / 2
         pv = classeStrategy.calcularPV(nivel, modificadorConstituicao)
     }

@@ -11,6 +11,6 @@ class racaTest {
 
         anao.aplicarBonusAtributos(atributosIniciais)
 
-        assertEquals(12, atributosIniciais["con"]) // Verifica o bônus de +2 em Constituição para Anão
+        assertEquals(12, atributosIniciais["con"])
     }
 }
