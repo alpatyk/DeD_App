@@ -1,7 +1,4 @@
-package classes
-
-import Classes.ClasseStrategy
-
+package Classes
 
 class GuerreiroStrategy : ClasseStrategy {
     override fun calcularPV(nivel: Int, modificadorConstituicao: Int): Int {

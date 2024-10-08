@@ -4,9 +4,9 @@ import Classes.MagoStrategy
 import Raca.Anao
 import Raca.Elfo
 import Raca.Humano
-import atributos.atributosAleatoriosStrategy
 import atributos.DistribuicaoPontosStrategy
-import classes.GuerreiroStrategy
+import Classes.GuerreiroStrategy
+
 
 fun main() {
     println("Insira o nome do personagem:")
@@ -26,15 +26,8 @@ fun main() {
         else -> Humano()  // Default
     }
 
-    // Escolher a estratégia de atributos
-    println("Escolha o método de criação de atributos (1. Aleatório, 2. Distribuição de Pontos):")
-    val metodoEscolhido = readLine()?.toIntOrNull()
-
-    val atributosStrategy = when (metodoEscolhido) {
-        1 -> atributosAleatoriosStrategy()
-        2 -> DistribuicaoPontosStrategy()
-        else -> atributosAleatoriosStrategy()  // Default
-    }
+    // Método de criação de atributos: Distribuição de Pontos
+    val atributosStrategy = DistribuicaoPontosStrategy()
 
     // Escolher a classe do personagem
     println("Escolha a classe do personagem (1. Guerreiro, 2. Mago, 3. Ladino, 4. Clérigo):")
