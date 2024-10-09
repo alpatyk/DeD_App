@@ -30,6 +30,7 @@ fun main() {
     val atributosStrategy = DistribuicaoPontosStrategy()
 
     // Escolher a classe do personagem
+    //coment
     println("Escolha a classe do personagem (1. Guerreiro, 2. Mago, 3. Ladino, 4. Clérigo):")
     val classeEscolhida = readLine()?.toIntOrNull()
 
